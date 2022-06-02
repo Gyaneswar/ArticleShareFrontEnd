@@ -9,7 +9,7 @@
     <div *ngIf="isloggedin && isSuperAdmin else showadmin">
       <a href="/create">Create</a>            
       <a href="/review">Review</a>            
-      <a href="/fetch" (click)="asctrue()">NewArticles</a>
+      <a href="/fetch" (click)="asctrue()">OldArticles</a>
       <a href="/fetch" (click)="desctrue()">OldArticles</a>     
       <a href="#about">About</a>
       <a href="/login" (click)="logout()" style="float: right;">{{emailid}}</a>
@@ -21,8 +21,8 @@
   <ng-template #showadmin>
     <div *ngIf="isloggedin && isAdmin else user">      
       <a href="/create">CreateArticles</a>      
-      <a href="/fetch" (click)="asctrue()">NewArticles</a>
-      <a href="/fetch" (click)="desctrue()">OldArticles</a>         
+      <a href="/fetch" (click)="asctrue()">OldArticles</a>
+      <a href="/fetch" (click)="desctrue()">NewArticles</a>         
       <a href="#about">About</a>
       <a href="/login" (click)="logout()" style="float: right;">{{emailid}}</a>
       <form (ngSubmit)="search()">
@@ -32,8 +32,8 @@
   </ng-template>
   <ng-template #user>
     <div *ngIf="isloggedin">    
-      <a href="/fetch" (click)="asctrue()">NewArticles</a>
-      <a href="/fetch" (click)="desctrue()">OldArticles</a>     
+      <a href="/fetch" (click)="asctrue()">OldArticles</a>
+      <a href="/fetch" (click)="desctrue()">NewArticles</a>     
       <a href="#about">About</a>            
       <a href="/login" (click)="logout()" style="float: right;">{{emailid}}</a>
       <form (ngSubmit)="search()">
