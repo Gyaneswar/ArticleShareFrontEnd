@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style> 
+textarea {
+  width: 100%;
+  
+  padding: 12px 20px;
+  box-sizing: border-box;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  background-color: #f8f8f8;
+  font-size: 16px;
+  resize: none;
+}
+.content{
+    height: 200px;
+}
+.uploadbtn {
+  background-color: #04AA6D;
+  color: white;
+  padding: 16px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  opacity: 0.9;
+}
+
+.uploadbtn:hover {
+  opacity:1;
+}
+
+</style>
+</head>
+<body>
+
+<h2>Create your own article</h2>
+
+<p><strong>Tip:</strong><b> Provide a short and concise title:</b></p>
+
+<form (ngSubmit)="uploadcontent()">
+  <textarea class="title" [(ngModel)]="title" placeholder="Enter title" name="title" id="title" required ngModel></textarea>
+  <p><strong>Tip:</strong><b> Provide your content / Use your notepade and paste here :</b></p>     
+  <textarea class="content" [(ngModel)]="content" placeholder="Enter content" name="content" id="content" required ngModel></textarea>
+  <p><strong>Tip:</strong><b> author name please !:</b></p>
+  <textarea class="author" [(ngModel)]="author" placeholder="Enter author" name="author" id="author" required ngModel></textarea>
+  <button type="submit" class="uploadbtn">Upload</button>
+
+</form>
+
+</body>
+</html>

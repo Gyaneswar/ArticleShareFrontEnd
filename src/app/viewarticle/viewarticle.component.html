@@ -1,0 +1,43 @@
+<h1>{{articlename}}</h1>
+<p>{{articlecontent}}</p>
+<b>
+    <p style="font-size: large;font-style: italic;">Author : {{articleauthor}}</p>
+</b>
+<ng-template [ngIf]="userlevel == 3">
+    <b>Logs : </b>
+    <br>
+    <b> | </b>
+    <br>
+    <b> | </b>
+    <div class="Demo" *ngFor="let log of listOfLogs">
+        <div>
+            <ng-template [ngIf]="log.articlestatus == 1">
+                <p><b>Status : </b>New/No content</p>
+            </ng-template>
+            <ng-template [ngIf]="log.articlestatus == 2">
+                <p><b>Status : </b>Under review/Content added</p>
+            </ng-template>
+            <ng-template [ngIf]="log.articlestatus == 3">
+                <p><b>Status : </b>Review Disapproved</p>
+            </ng-template>
+            <ng-template [ngIf]="log.articlestatus == 4">
+                <p><b>Status : </b>Review Approved/Published</p>
+            </ng-template>
+            <ng-template [ngIf]="log.articlestatus == 5">
+                <p><b>Status : </b>Edited</p>
+            </ng-template>
+        </div>
+        <p><b>Status change date : </b>{{log.articledate}}</p>
+        <div>
+            <ng-template [ngIf]="log.reviewComments == ' '" [ngIfElse]="elseBlock">
+                <p><b>Review Comments : </b>Under Review</p>
+            </ng-template>
+            <ng-template #elseBlock>
+                <p><b>Review Comments : </b>Approved!</p>
+            </ng-template>
+        </div>
+        <b> . </b>
+        <br>
+        <b> . </b>
+    </div>
+</ng-template>

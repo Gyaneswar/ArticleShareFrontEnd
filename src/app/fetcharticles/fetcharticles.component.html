@@ -1,0 +1,15 @@
+<!-- <table>
+    <tr>
+        <th>article name</th>
+    </tr>
+    <tr *ngFor="let article of listofarticles">
+        <td>{{article.articlename}}</td>
+        <td>{{article.articlecontent}}</td>
+    </tr>
+</table> -->
+
+
+<div class ="Demo" *ngFor="let article of listofarticles">
+    <H2 (click)="openarticle(article)" style="cursor: pointer;">{{article.articlename}}</H2>    
+    <p>{{article.articlecontent}}</p>
+</div>

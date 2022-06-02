@@ -1,0 +1,15 @@
+<div class ="Demo" *ngFor="let article of listofarticles">    
+    <div>          
+        <b><a style="cursor: pointer;" class="title">{{article.articlename}}</a></b>
+        <a style="cursor: pointer;" (click)="approve(article)" class="approve">Approve</a>
+        <a style="cursor: pointer;" (click)="reject(article)" class="reject">Reject</a>        
+    </div>
+    <div>
+        <b><p style="font-size: large;">Author : {{article.author}}</p></b>
+        <p>upload date : {{article.articledate}}</p>        
+    </div>    
+    <p  style="">{{article.articlecontent}}</p>
+    
+</div>
+
+<!-- (click)="openarticle(article)" -->

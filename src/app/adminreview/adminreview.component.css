@@ -1,0 +1,21 @@
+.approve{
+    color: #f2f2f2;    
+    background-color: #04AA6D;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+    float: right;
+}
+.reject{
+    color: #f2f2f2;
+    background-color: #333;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+    float: right;
+}
+.title{    
+    font-size: xx-large;
+}
